@@ -6,8 +6,8 @@
     <b-container>
   <!-- Content here -->
   
-    <div>
-      <b-navbar toggleable="lg" type="dark" variant="primary">
+    <div >
+      <b-navbar toggleable="lg" type="dark" variant="primary" class="nav">
         <b-navbar-brand href="#">Ecommerce Side</b-navbar-brand>
 
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -36,6 +36,8 @@
     <b-col sm="10">
       
        <b-card  title="PRODUCTS">
+
+         <CarouSlide />
         
          <ProductItemss v-for="product in items" :mada="product" :key="product.id"/>  
       </b-card>
@@ -53,7 +55,7 @@
 // import HelloWorld from '@/components/HelloWorld.vue' 
 import ShopMall from '../components/ShopMall'
 import ProductItemss from '../components/ProductItemss'
-
+import CarouSlide from '../components/CarouSlide'
 export default {
   name: 'Home',
 
@@ -66,19 +68,19 @@ export default {
        },
         {
          categoryId: 2,
-         categoryName: 'Gadgets'
+         categoryName: 'Food'
        },
         {
          categoryId: 3,
-         categoryName: 'Gadgets'
+         categoryName: 'Fruits'
        },
         {
          categoryId: 4,
-         categoryName: 'Gadgets'
+         categoryName: 'Shoes'
        },
         {
          categoryId: 5,
-         categoryName: 'Gadgets'
+         categoryName: 'Fashion'
        }
       ],
       items: [
@@ -160,7 +162,16 @@ export default {
   components: {
     
     ShopMall,
-    ProductItemss
+    ProductItemss,
+    CarouSlide
+
   }
 }
 </script>
+
+<style scoped>
+.nav {
+  height: 7em;
+  margin-top: 0;
+}
+</style>
