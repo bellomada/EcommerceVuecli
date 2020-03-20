@@ -3,7 +3,7 @@
     <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     
-    <b-container>
+    <b-container fluid>
   <!-- Content here -->
   
     <div >
@@ -38,15 +38,20 @@
        <b-card  title="PRODUCTS">
 
          <CarouSlide />
+
+         
         
          <ProductItemss v-for="product in items" :mada="product" :key="product.id"/>  
       </b-card>
         
        </b-col>
   </b-row>
-
-  
+        
+   <FooterEcom/>
     </b-container>
+
+    
+    
   </div>
 </template>
 
@@ -56,6 +61,7 @@
 import ShopMall from '../components/ShopMall'
 import ProductItemss from '../components/ProductItemss'
 import CarouSlide from '../components/CarouSlide'
+import  FooterEcom from  '../components/FooterEcom'
 export default {
   name: 'Home',
 
@@ -163,7 +169,8 @@ export default {
     
     ShopMall,
     ProductItemss,
-    CarouSlide
+    CarouSlide,
+    FooterEcom
 
   }
 }
